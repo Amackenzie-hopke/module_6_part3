@@ -62,8 +62,8 @@ jobs:
           context: ./${{ matrix.service }}
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name }}-${{ matrix.service }}:latest
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name }}-${{ matrix.service }}:${{ github.sha }}
+            ghcr.io/amackenzie-hopke/${{ github.event.repository.name }}-${{ matrix.service }}:latest
+            ghcr.io/amackenzie-hopke/${{ github.event.repository.name }}-${{ matrix.service }}:${{ github.sha }}
           provenance: false
           sbom: false
 
